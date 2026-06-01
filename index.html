@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 <body>
-    <div class="total-nav">
-        <header class="menu-nav">
+    <!-- 
+    --------------------
+    ITEM 1:HEADER
+    --------------------
+    -->
+    <div class="total-header">
+        <header class="menu-header">
              <!-- Hamburguesa (solo mobile) -->
                 <svg class="hamburger"width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M1 6C1 5.30964 1.55964 4.75 2.25 4.75H21.75C22.4404 4.75 23 5.30964 23 6C23 6.69036 22.4404 7.25 21.75 7.25H2.25C1.55964 7.25 1 6.69036 1 6Z" fill="#333333"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 11.3096 1.55964 10.75 2.25 10.75H21.75C22.4404 10.75 23 11.3096 23 12C23 12.6904 22.4404 13.25 21.75 13.25H2.25C1.55964 13.25 1 12.6904 1 12Z" fill="#333333"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M1 18C1 17.3096 1.55964 16.75 2.25 16.75H21.75C22.4404 16.75 23 17.3096 23 18C23 18.6904 22.4404 19.25 21.75 19.25H2.25C1.55964 19.25 1 18.6904 1 18Z" fill="#333333"></path></svg>
              <div class="options-left">
@@ -26,46 +31,65 @@
         </header>
     </div>
     <main class="contain">
+        <!-- 
+    --------------------
+    ITEM 2: CARDS
+    --------------------
+    -->
         <div>
             <h2 class="title">Te damos la bienvenida al vuelo de tu negocio</h2>
-            <div class="container-box">
-                <div class="box">
+            <div class="container-card">
+                <div class="card">
                     <div>
-                        <div class="box-i">
+                        <div class="card-i">
                         <span class="material-symbols-outlined">percent_discount</span>
                         </div>
-                    </div>
+                    </div class>
+                    <div class="card-text">
                         <h2>Viajá liviano de comisiones</h2>
                         <p>Vos elegís cuando acreditar la plata de tus ventas,siempre con comisiones bajas.</p>
-                
+                    </div>
                 </div>
-                <div class="box">
+                <div class="card">
                 <div>
-                    <div class="box-i">
+                    <div class="card-i">
                     <span class="material-symbols-outlined">featured_seasonal_and_gifts</span>
                     </div>
                 </div>
-                <h2>Promociones que se adaptan a vos</h2>
-                <p>Activá combos, cuotas o beneficios cuándo y cómo quieras, según lo que tu negocio necesite.</p>
+                <div class="card-text">
+                    <h2>Promociones que se adaptan a vos</h2>
+                    <p>Activá combos, cuotas o beneficios cuándo y cómo quieras, según lo que tu negocio necesite.</p>
                 </div>
-                <div class="box">
+                </div>
+                <div class="card">
                     <div>
-                        <div class="box-i">
+                        <div class="card-i">
                             <span class="material-symbols-outlined">bar_chart</span>
                         </div>
                     </div>
-                    <h2>Todo el control desde la cabina.</h2>
-                    <p>Centralizás la información clave en un solo lugar, con acceso en tiempo real para vos y tu equipo.</p>
-
+                    <div class="card-text">
+                        <h2>Todo el control desde la cabina.</h2>
+                        <p>Centralizás la información clave en un solo lugar, con acceso en tiempo real para vos y tu equipo.</p>
+                    </div>
             </div>
         </div>
-        <div class="container-violet">
-            <div class="violet-left">
-            <h2 class="title-violet">Historias que vuelan</h2>
-            <span class="span-violet">Conocé a los comercios que eligen Nave todos los días 💜 </span>
+        <!-- 
+    --------------------
+    ITEM 3:BANNER
+    --------------------
+    -->
+        <div class="container-banner">
+            <div class="banner-left">
+            <h2 class="title-banner">Historias que vuelan</h2>
+            <span class="span-banner">Conocé a los comercios que eligen Nave todos los días 💜 </span>
             </div>
-            <div class="button-violet">Conocer más</div>
+            <div class="button-banner">Conocer más</div>
         </div>
+        <!-- 
+    --------------------
+    ITEM 4: PAY
+    --------------------
+    -->
             <div class="payment">
                 <h2 class="h2-pay">Cobrá como querés, donde querés.</h2>
                     <div class="box-pay">
@@ -77,11 +101,11 @@
                                 <span class="material-symbols-outlined">chevron_right</span>
                             </div>
                         </div>
-                        <img class="qr-photo"src="https://navenegocios.ar/content/dam/galicia/nave/images/home/img_qr.png" width="475px" height="325.49px">
+                        <img class="qr-photo"src="https://navenegocios.ar/content/dam/galicia/nave/images/home/img_qr.png">
                     </div>
             </div>
             <div class="box-pay">
-                    <img class="posnet-photo"  src="https://navenegocios.ar/content/dam/galicia/nave/images/home/img_terminal.png/jcr:content/renditions/Galicia-Desktop-PNG.png"  width="475px" height="325.49px">
+                    <img class="posnet-photo"  src="https://navenegocios.ar/content/dam/galicia/nave/images/home/img_terminal.png/jcr:content/renditions/Galicia-Desktop-PNG.png"  >
                 <div class="pay-right">
                     <h2>Terminal Nave Point</h2>
                     <p>Aceptá pagos con tarjetas (contactless,con tecnología NFC) o QR y resolvé cada venta con autonomía, estés donde estés.</p>
@@ -92,36 +116,44 @@
                     </div>
                 </div>
             </div>
-        <div class="footer">
-            <img class="footer-logo"src="./symbol-nave.png">      
-            <div class="footer-box">
-                <div class="footer-column">
-                <span class="footer-title">Nave</span> 
-                <span class="footer-link">Cobrá con Nave</span> 
-                <span class="footer-link">Entrar a Nave</span> 
-                <span class="footer-link">Abrir cuenta en Galicia</span> 
-                <span class="footer-link">Comisiones</span> 
+    <!-- 
+    --------------------
+    ITEM 5: FOOTER
+    --------------------
+    -->
+    
+    <div class="footer-box">
+        <div class="footer"> 
+           <div class="footer-column">
+            
+                    <span class="footer-title">Nave</span> 
+                    <span class="footer-link">Cobrá con Nave</span> 
+                    <span class="footer-link">Entrar a Nave</span> 
+                    <span class="footer-link">Abrir cuenta en Galicia</span> 
+                    <span class="footer-link">Comisiones</span> 
+                    </div>
+                    <div class="footer-column">
+                        <span class="footer-title">Cobros</span>
+                        <span class="footer-link">QR</span>
+                        <span class="footer-link">Cobros online</span>
+                        <span class="footer-link">Link de pago</span>
+                        <span class="footer-link">Nave Point</span>
+                        <span class="footer-link">Integraciones</span>
+                        <span class="footer-link">Nave Developers</span>
+                    </div>
+                    <div class="footer-column">
+                        <span class="footer-title">Beneficios</span>
+                        <span class="footer-link">Promociones</span>
+                        <span class="footer-link">Plan Simple</span>
+                    </div>
+                    <div class="footer-column">
+                        <span class="footer-title">Te puede interesar</span>
+                        <span class="footer-link">Galicia</span>
+                    </div>
+                    
                 </div>
-                <div class="footer-column">
-                    <span class="footer-title">Cobros</span>
-                    <span class="footer-link">QR</span>
-                    <span class="footer-link">Cobros online</span>
-                    <span class="footer-link">Link de pago</span>
-                    <span class="footer-link">Nave Point</span>
-                    <span class="footer-link">Integraciones</span>
-                    <span class="footer-link">Nave Developers</span>
-                </div>
-                <div class="footer-column">
-                    <span class="footer-title">Beneficios</span>
-                    <span class="footer-link">Promociones</span>
-                    <span class="footer-link">Plan Simple</span>
-                </div>
-                <div class="footer-column">
-                    <span class="footer-title">Te puede interesar</span>
-                    <span class="footer-link">Galicia</span>
-                </div>
-            </div>
         </div>
+    </div>
     </main>
     </div>  
 </body>

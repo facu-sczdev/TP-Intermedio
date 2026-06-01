@@ -7,25 +7,33 @@
     margin: 0px;
     box-sizing: border-box;
 }
+html, body{
+    font-size: 100%;
+}
 body{
     background-color: #FCFBFF;
     font-family: var(--font-family);
     height: 300vh;
-    overflow-x: hidden;
 }
 .contain{
     max-width: 1022px;
     margin: 0 auto;
 }
-.total-nav{
+/* 
+---------------------------
+PRIMER ITEM: HEADER
+---------------------------
+*/
+.total-header{
     width:100%;
     height: 72px;
     border-bottom: 1px solid lightgrey;
     position: sticky;
     top: 0;
     background-color: white;
+    z-index: 10;
 }
-.menu-nav{
+.menu-header{
     max-width: 900px;
     height: 82px;
     display: flex;
@@ -94,9 +102,14 @@ body{
     font-size: 22px;
     cursor: pointer;
 }
+/* 
+---------------------------
+HEADER-DESKTOP AND MOBILE
+---------------------------
+*/
 
 @media screen and (max-width: 990px) {
-    .menu-nav {
+    .menu-header {
         justify-content: space-between;
         position: relative;
     }
@@ -119,6 +132,11 @@ body{
         transform: translateX(-50%);
     }
 }
+/* 
+---------------------------
+SEGUNDO ITEM: CARDS
+---------------------------
+*/
 .title{
     display: block;
     text-align: center;
@@ -131,36 +149,42 @@ body{
     margin-inline-end: 0px;
     color: #2b2b2b;
 }
-.container-box{
+.container-card{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap:16px;
 }
-.box{
-    width: 268px;
+.card{
+    max-width: 268px;
+    width: 100%;
     height: 254px;
-    padding: 24px;
+    padding:24px;
+    border-radius: 16px;
     background-color: white;
     margin-top: 12px;
     gap:12px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 70px;
+    justify-content: space-around;
     transition-duration: 0.3s;
+    z-index: 5;
+    flex-grow: 1;
+    flex: 1 1 300px;
 }
-.box:hover{
+.card:hover{
     transform: translateY(-6px);
 }
 
-.box span{
+.card span{
     color: #652BDF;
 }
-.box:hover span{
+.card:hover span{
     color:#360c72;
 }
-.box-i{
-    width: 48px;
+.card-i{
+    max-width: 48px;
+    width: 100%;
     height: 48px;
     background-color: #f0eafc;
     border-radius: 8px;
@@ -169,22 +193,80 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-h2{
+.card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.card-text h2{
     font-size: 24px;
-    color: #2b2b2b;
+    color: #2b2c2b;
+    margin: 0;
+    font-weight: 600;
 }
 .icon{
     width: 24px;
     height: 24px;
 }
-p{
+.card-text p{
     color: #6a6a6a;
     font-size: 18px ;
     gap:16px;
+    inline-size: 258px;
+    font-weight: 100 900;
 }
+/*
+---------------------------
+CARDS-MOBILE
+---------------------------
+*/
+@media screen and (max-width:765px){
+    body {
+        height: 500vh;
+    }
+    
+    .title {
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .container-card {
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+        padding: 16px;
+    }
+    .card {
+        width: 100%;
+        gap: 16px;
+        padding: 24px;
+        max-width: 765px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: 194px;
+    }
+    .card:hover{
+    transform: none;
+}
+    .card-i{
+        max-width: 62px;
+        width: 100%;
+        height: 62px;
+    }
+    .card-text p{
+        font-size: 16px;
+        width: 90%;
 
-.container-violet{
+    }
+}
+/* 
+---------------------------
+ITEM 3: BANNER
+---------------------------
+*/
+
+.container-banner{
     width: 100%;
     height: 134px;
     background-color: #E2D2FF;
@@ -194,62 +276,93 @@ p{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;    
-    margin: 0 auto;
+    margin-top: 50px;
     margin-bottom: 40px;
 }
-.violet-left{
+.banner-left{
     display: flex;
     flex-direction: column;
     gap: 16px;
     color: #360c72;
 }
-.title-violet{
+.title-banner{
     color: #360c72;
     font-size: 30px;
     font-weight: 600;
 }
-.span-violet{
+.span-banner{
     font-size: 18px;
 }
-.button-violet{
+.button-banner{
     background-color: white;
     color: #652BDF;
     font-weight: 700;   
     padding: 10px 32px;
     border-radius: 50px;
 }
-.button-violet:hover{
+.button-banner:hover{
     color: #E2D2FF;
     background-color:black;
 }
+
+@media screen and (max-width:765px) {
+    .container-banner{
+        display: flex;
+        flex-direction: column;
+        padding: 32px 40px;
+        
+        max-width: 1022px;
+        width: calc(100% - 48px);
+        margin: 0 auto;
+        height: auto;
+
+        gap: 24px;
+    }
+    .button-banner {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* 
+---------------------------
+CUARTO ITEM: PAY
+---------------------------
+*/
+
 .h2-pay{
+    margin-top: 50px;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     color: #2b2b2b;
 }
 .box-pay{
     width: 100%;
     max-width: 1022px;
-    height: 367.49px;
+    height: auto;
     background-color: white;
     border-radius: 32px;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; /* Centra verticalmente el contenido */
+    align-items: center; 
     overflow: hidden;
 }
 .qr-photo{
     transition: transform 0.5s ease-in-out;
     transform-origin: 50% 50%;
+    z-index: 4;
+    max-width:475px;
+    max-height: 325px;
+    width: 100%;
+    height: 100%;
 }
 .qr-photo:hover{
     transform: scale(1.05);
 }
 .pay-left{
-   flex: 1;              
+    flex: 1;              
     max-width: 500px;      
     padding: 50px 0px 50px 50px;
     display: flex;
@@ -260,6 +373,11 @@ p{
 .posnet-photo{
     transition: transform 0.5s ease-in-out;
     transform-origin: 50% 50%;
+    z-index: 2;
+    max-width:475px;
+    max-height: 325px;
+    width: 100%;
+    height: 100%;
 }
 .posnet-photo:hover{
     transform: scale(1.05);
@@ -271,17 +389,13 @@ p{
 .pay-left p{
     font-size: 18px;
     font-weight: 400;
-    color: #6F6A6A;
+    color: #2b2b2b;
     line-height: 1.5;     
     max-width: 415px;      
     height: auto;
+    inline-size: auto;
 }
-.pay-more{
-    display: flex;
-    align-items: center;
-    color: #360c72;
-    font-weight: 700;
-}
+
 
 .pay-right{
     display: flex;
@@ -300,9 +414,9 @@ p{
     font-size: 18px;
     width: 90%;             
     max-width: 500px;       
-    height: 81px;
+    height: auto;
     font-weight: 400;
-    color: #6F6A6A;
+    color: #2b2b2b;
     word-break: break-word;
 }
 .pay-more{
@@ -318,43 +432,107 @@ p{
 .pay-more-text:hover{
     text-decoration: underline;
 }
-.footer{
-    margin-top: 50px;
-    background-color: white;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    height: 60vh;
+
+@media screen and (max-width:765px) {
+    .payment{
+        display: flex;
+        flex-direction: column;
+    }
+    .box-pay {
+        display: flex;
+        flex-direction: column;
+
+        background-color: white;
+
+        max-width: 1022px;
+        width: calc(100% - 48px);
+        height: auto;
+
+        margin: 0 auto;
+        gap:8px;
+    }
+    .pay-left {
+        padding: 32px 24px 16px 24px; 
+        max-width: 100%;
+    }
+
+    .pay-right {
+        padding: 32px 24px 16px 24px;
+        width: 100%;
+    }
+
+    .qr-photo,
+    .posnet-photo {
+        width: 100%;
+        height: auto; 
+        max-width: 100%;
+        max-height: none;
+    }
+    .qr-photo{
+        order: 1;
+    }
+    .qr-photo:hover{
+    transform: none;
 }
-.footer-box{
-    width: 100%;
-    max-width: 1022px;
-
-    margin: 0 auto;
-    padding-bottom: 20px;
-
-    display: flex;
-    justify-content: space-between;
-    gap: 48px;
-
-    font-size: 14px;
-    font-weight: 400;
-
-    border-bottom: 1px solid lightgrey;
+.posnet-photo:hover{
+    transform: none;
+}
+    .pay-left{
+        order: 2;
+    }
+    .pay-left p, .pay-right p{
+        max-width: 1022px;
+        width: 100%;
+    }
+    .pay-right h2{
+        font-weight: 600;
+    }
+    
+    
+    
+}
+/* 
+---------------------------
+QUINTO ITEM: Footer
+---------------------------
+*/
+.footer-box {
+    background-color: white;
+     width: 100%;
+     width: 100vw;
+     margin-left: calc(-50vw + 50%);
+    margin-top: 50px;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   padding: 30px;
+   max-width: 1022px;
+   width: 100%;
+   margin: 0 auto;
 }
 .footer-column{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap:16px
+
 }
-.footer-title{
+.footer-title {
     font-weight: 700;
-    color: #2b2b2b;
 }
-.footer-logo{
-    margin-left: 110px;
-}
-.footer-link:hover{
+.footer-link:hover {
     text-decoration: underline;
+    color: #652BDF;
+    cursor: pointer;
 }
-
-
+@media screen and (max-width:765px) {
+    .footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+    max-width: 1022px;
+    width: 100%;
+    margin: 0 auto;
+    row-gap: 20px;
+    }
+}
